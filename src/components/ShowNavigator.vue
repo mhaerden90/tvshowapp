@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>TV Show App</h2>
+    <h2>Vue TV Show App</h2>
 
     <input class="input" type="text" v-model="input" placeholder="Search for show"/>
     <button class="button"  @click="getData">Search</button>
@@ -10,7 +10,7 @@
       <option v-for="genre in genres" :value= genre.value :key=genre> {{genre.label}}</option>
       </select>
     </span>
-
+  
     <vue-horizontal responsive class="horizontal">
       <section v-for="item in filteredList" :key="item">
           <div >
@@ -79,16 +79,16 @@ export default {
 
   methods: {
  
-
+    //assigns selected show to selectedItem and opens Modal with additional information
     getDetails(item){
       this.selectedItem=item;
       this.showModal = true;
     },
-
+    //closes Modal
     closeModal(){
       this.showModal = false;
     },
-
+    //reads genres of item and returns N/A if nothing was found
     getGenres(item){
       let genres = item.show.genres;
       if(genres.length === 0){
@@ -96,7 +96,7 @@ export default {
       }
       return genres
     },
-
+    //reads average rating of show, and returns N/A if nothing was found
     getRating(item){
       let rating = item.show.rating.average;
       if(rating === null){
@@ -104,7 +104,7 @@ export default {
       }
       return rating;
     },
-
+    //This method invokes the API with the string in the inputfield as search parameters
     async getData() {
       try {
         const url = new URL("https://api.tvmaze.com/search/shows");
@@ -115,7 +115,7 @@ export default {
         console.log("error happened" + e)
       }
     },
-
+    //this fetches the image URL from the API data. In case nothing is found a standard image is used.
     getImage(item) {
       let image = "";
       let obj = item.show.image;
@@ -132,8 +132,6 @@ export default {
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 .input {

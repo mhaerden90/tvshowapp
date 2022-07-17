@@ -8,10 +8,7 @@
      <b> Summary </b> <br>
       {{cleanHTML(this.selectedItem.show.summary)}}
       </div>
-    
-    <h5>  </h5>
-
-    <div class="modal-footer">
+        <div class="modal-footer">
       <button class="button" @click="$emit('closeModal')">Close</button>
     </div>
 </div>
@@ -22,7 +19,7 @@
 export default {
   name: 'show-modal',
   props: {
-    selectedItem:{}
+    selectedItem:{} //SelectedItem is passed by the parent (showNavigator) into the modal
   },
   methods:{
     //This method removes the html tags from the data that is delivered by the API
@@ -50,15 +47,31 @@ export default {
   height: 400px;
   max-height: 100%;
   background: #FFFFFF;
-  box-shadow: 1px 1px 10px 1px;
   overflow-x: auto;
   display: flex;
   flex-direction: column;
     }
 
 .modal-body {
+  height: 100%;
   text-align: left;
   margin: 10px;
+  padding: 4px;
+  border: 1px solid #009688;
+  border-radius: 6px;
+}
+
+.button {
+  background-color: #009688; /* Green */
+  height:  32px;
+  margin: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 </style>
