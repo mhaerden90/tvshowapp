@@ -23,4 +23,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.button {
+  background-color: #009688; /* Green */
+  height:  32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 </style>
