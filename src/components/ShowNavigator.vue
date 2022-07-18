@@ -12,9 +12,9 @@
     </span>
   
     <vue-horizontal responsive class="horizontal">
-      <section v-for="item in filteredList" :key="item">
+      <section v-for="item in filteredList" :key="item" @click="getDetails(item)">
           <div >
-            <img class="image" :src= "getImage(item)" @click="getDetails(item)" />
+            <img class="image" :src= "getImage(item)" />
           </div>
          <div>
           <h4>{{ item.show.name }}</h4>
