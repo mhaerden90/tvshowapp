@@ -1,6 +1,6 @@
 # tvshowapp
 
-This app was built to showcase my Vue.Js skills. It was built using the followin frameworks/packages:
+This app was built to showcase my Vue.Js capabilities. It was built using the following frameworks/packages:
 
 - Vue 3
 - Axios (for API call)
@@ -10,7 +10,7 @@ This app was built to showcase my Vue.Js skills. It was built using the followin
 
 The following requirements were met:
 
-- Built app that uses open TV shows API http://www.tvmaze.com/api to show list of shows
+- Build app that uses open TV shows API http://www.tvmaze.com/api to show list of shows
 - List should be horizontal
 - By clicking on a show a new window should open with more information (made use of a modal, using a separate reusable componenent)
 - User is able to filter the shows on Genre
