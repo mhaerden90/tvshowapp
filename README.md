@@ -1,6 +1,6 @@
 # tvshowapp
 
-This app was built to showcase my Vue.Js capabilities. It was built using the following frameworks/packages:
+This app was built to showcase my Vue.Js capabilities. It was built using the following frameworks/libraries:
 
 - Vue 3
 - Axios (for API call)
